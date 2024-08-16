@@ -1,7 +1,0 @@
-Flask
-Flask-CORS
-numpy
-soundfile
-noisereduce
-pydub
-werkzeug
