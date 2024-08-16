@@ -6,10 +6,12 @@ from threading import Thread
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+
 def run_backend():
     backend_dir = os.path.join(BASE_DIR, "backend")
     os.chdir(backend_dir)
     subprocess.run([sys.executable, "app.py"])
+
 
 def run_frontend():
     frontend_dir = os.path.join(BASE_DIR, "frontend")
@@ -18,6 +20,7 @@ def run_frontend():
         subprocess.run(["npm.cmd", "start"])
     else:
         subprocess.run(["npm", "start"])
+
 
 def main():
     backend_thread = Thread(target=run_backend)
